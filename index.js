@@ -30,7 +30,7 @@ d.addEventListener('click', e => {
 
 async function getCity(city, key){
     try{
-        let response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${key}`),
+        let response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${key}`),
         json = await response.json();
 
         if(json.length === 0){
@@ -63,7 +63,7 @@ async function getClimateStats(url){
 
         $cityStats.innerHTML = `
                                 <div class="climate-stats-temp">
-                                    <img src=" http://openweathermap.org/img/wn/${icon}@2x.png" alt="${description}"><h1>${celciusG}°C</h1>
+                                    <img src=" https://openweathermap.org/img/wn/${icon}@2x.png" alt="${description}"><h1>${celciusG}°C</h1>
                                 </div>
                                 <h4>${description}</h4>
                                 <h4>Humendad : ${humidity}%</h4>
